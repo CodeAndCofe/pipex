@@ -6,7 +6,7 @@
 /*   By: aferryat <aferryat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 18:24:03 by aferryat          #+#    #+#             */
-/*   Updated: 2025/02/20 18:24:14 by aferryat         ###   ########.fr       */
+/*   Updated: 2025/02/22 16:26:34 by aferryat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 
 void	freeup(char **sr, int d)
 {
+	int	i;
+
+	i = 0;
+	if (d == -1)
+	{
+		while (sr[i] != NULL)
+			i++;
+		d = i;
+	}
 	while (d > 0)
 	{
 		free(sr[d]);
@@ -22,7 +31,7 @@ void	freeup(char **sr, int d)
 	free(sr);
 }
 
-int	count_word(char	*str, char sep)
+static int	count_word(char	*str, char sep)
 {
 	int	word;
 	int	i;
