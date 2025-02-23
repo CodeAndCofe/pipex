@@ -6,7 +6,7 @@
 /*   By: aferryat <aferryat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 18:24:03 by aferryat          #+#    #+#             */
-/*   Updated: 2025/02/22 16:26:34 by aferryat         ###   ########.fr       */
+/*   Updated: 2025/02/23 13:35:54 by aferryat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	count_word(char	*str, char sep)
 {
 	int	word;
 	int	i;
-	
+
 	i = 0;
 	word = 0;
 	while (str[i])
@@ -54,7 +54,6 @@ static char	*reall_split(char *str, char sep)
 {
 	char	*ptr;
 	int		i;
-	
 
 	i = 0;
 	while (str[i] && str[i] != sep)
@@ -99,4 +98,3 @@ char	**ft_split(char *str, char sep)
 	ptr[i] = NULL;
 	return (ptr);
 }
-
